@@ -32,40 +32,40 @@ $ satoshi config init
 
 ```yaml
 lircd:
-	lircd_path: /var/run/lirc/lircd
+  lircd_path: /var/run/lirc/lircd
 satoshi:
-	# 接口设备
-	http:
-		port: '8234' # 服务端口号
-		devices:
-			- id: '123' # 设备ID，调用时唯一标识
-			type: switch # 设备类型
-			name: device_name
-			switch_config: # 设备对应的配置信息
-				on_pin: 17 # GPIO口
-				on_lircd_cmd: xxx on # lircd 控制开命令
-				off_lircd_cmd: xxx off # lircd 控制关命令
+  # 接口设备
+  http:
+    port: '8234' # 服务端口号
+    devices:
+      - id: '123' # 设备ID，调用时唯一标识
+      type: switch # 设备类型
+      name: device_name
+      switch_config: # 设备对应的配置信息
+        on_pin: 17 # GPIO口
+        on_lircd_cmd: xxx on # lircd 控制开命令
+        off_lircd_cmd: xxx off # lircd 控制关命令
 
-	# Siri设备列表
-	siri:
-		pin_code: '00102003'   # satoshi birdge 8位HomeKit设置代码
-		devices:
-			- id: 2 # accessory设备ID，数字且大于等于2
-			type: switch  # accessory设备类型
-			name: device1	# 设备名
-			switch_config: # 开关设备对应的配置信息
-				on_pin: 17   # GPIO口
-				update_interval: 5	# 定时更新状态间隔，单位秒
-				on_lircd_cmd: xxx on # lircd 控制开命令
-				off_lircd_cmd: xxx off # lircd 控制关命令
-			- id: 3
-			type: lightbulb
-			name: device2
-			lightbulb_config: # 灯泡设备对应的配置信息
-				on_pin: 26   # GPIO口
-				update_interval: 5	# 定时更新状态间隔，单位秒
-				on_lircd_cmd: xxx on # lircd 控制开命令
-				off_lircd_cmd: xxx off # lircd 控制关命令
+  # Siri设备列表
+  siri:
+    pin_code: '00102003'   # satoshi birdge 8位HomeKit设置代码
+    devices:
+      - id: 2 # accessory设备ID，数字且大于等于2
+      type: switch  # accessory设备类型
+      name: device1  # 设备名
+      switch_config: # 开关设备对应的配置信息
+        on_pin: 17   # GPIO口
+        update_interval: 5  # 定时更新状态间隔，单位秒
+        on_lircd_cmd: xxx on # lircd 控制开命令
+        off_lircd_cmd: xxx off # lircd 控制关命令
+      - id: 3
+      type: lightbulb
+      name: device2
+      lightbulb_config: # 灯泡设备对应的配置信息
+        on_pin: 26   # GPIO口
+        update_interval: 5  # 定时更新状态间隔，单位秒
+        on_lircd_cmd: xxx on # lircd 控制开命令
+        off_lircd_cmd: xxx off # lircd 控制关命令
 ```
 
 ### 开启服务
