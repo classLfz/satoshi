@@ -16,13 +16,15 @@ $ satoshi --help
 
 ### 配置
 
-配置命令说明
+#### 配置命令说明
 
 ```bash
 $ satoshi config
 ```
 
-配置文件初始化
+#### 配置文件初始化
+
+默认配置文件生成于 `~/.satoshi/config.yaml`
 
 ```bash
 $ satoshi config init
